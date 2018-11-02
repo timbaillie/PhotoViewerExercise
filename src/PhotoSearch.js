@@ -23,7 +23,11 @@ class PhotoSearch extends Component {
 
     componentDidUpdate(prevProps) {
         // if photos updates scroll so Search Results are at top of page
-        this.headerRef.current.scrollIntoView();
+        this.headerRef.current.scrollIntoView({
+            behavior: 'smooth',
+            block: "start",     
+            inline: "nearest"
+        });
     }
 
     search(query) {
