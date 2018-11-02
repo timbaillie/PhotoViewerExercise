@@ -5,7 +5,7 @@ import styles from './SearchResults.module.css';
 
 const SearchResults = ({photos, query}) => (
     <section>
-        <h2>Search Results for {query}</h2>
+        <h2>Search Results for <span className={styles.queryText}>{query}</span></h2>
         <ul className={styles.list}>
             { 
                 photos.map((photo, index) => (

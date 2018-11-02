@@ -19,6 +19,9 @@
     max-width: 100%;
 }
 
+.queryText {
+    color: purple;
+}
 
 @media (min-width: 400px) {
     .photoList {
