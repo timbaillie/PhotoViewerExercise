@@ -16,7 +16,14 @@ class PhotoSearch extends Component {
           first: true
         };
 
+        this.headerRef = React.createRef();
+
         this.search = this.search.bind(this);
+    }
+
+    componentDidUpdate(prevProps) {
+        // if photos updates scroll so Search Results are at top of page
+        this.headerRef.current.scrollIntoView();
     }
 
     search(query) {
@@ -38,7 +45,7 @@ class PhotoSearch extends Component {
     render() {
         return (
             <section className={styles.root}>
-                  <h1 className={styles.header}>Photo Viewer</h1>
+                  <h1 ref={this.headerRef} className={styles.header}>Photo Viewer</h1>
                   {
                       this.state.photos.length > 0 && (
                         <SearchResults 
