@@ -4,7 +4,7 @@ import SearchResults from './SearchResults';
 
 import styles from './PhotoSearch.module.css';
 
-const UNSPLASH_ACESS_KEY = '98d66a6dbecc8ad9c7500e1e1366f191203fca25a5a9133b159392512a185a85';
+const UNSPLASH_ACESS_KEY = 'insert_valid_key';
 
 class PhotoSearch extends Component {
     constructor(props) {
